@@ -5,18 +5,14 @@ interface IComponentsProps {
   title: string;
 }
 
-class Component<T extends IComponentsProps> {
+class Component<T> {
   constructor(public props: T) {}
 }
 
-class PageProps implements IComponentsProps {
-  title: string;
-}
-
-class Page extends Component<PageProps> {
+class Page extends Component<IComponentsProps> {
   pageInfo() {
     console.log(this.props.title);
   }
 }
 
-export {Page};
+export { Page };

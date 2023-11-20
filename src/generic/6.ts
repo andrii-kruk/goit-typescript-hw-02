@@ -21,9 +21,8 @@ let userData: User = {
   password: "bobbi1999.bob",
 };
 
-function createOrUpdateUser(initialValues: Partial<User>): void {
-  userData = { ...userData, ...initialValues };
-  console.log(userData);
+function createOrUpdateUser(initialValues: Partial<User>): object {
+  return { ...userData, ...initialValues };
 }
 
 createOrUpdateUser({ email: "user@mail.com", password: "password123" });

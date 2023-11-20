@@ -3,9 +3,9 @@
   Доповніть цю функцію, використовуючи generics, щоб вона повертала правильний тип.
 */
 
-function getPromise<T, K>(): Promise<[T, K]> {
+function getPromise(): Promise<[string, number]> {
   return new Promise((resolve) => {
-    resolve(["Text", 50] as [T, K]);
+    resolve(["Text", 50]);
   });
 }
 
