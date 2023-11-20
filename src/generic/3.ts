@@ -3,8 +3,12 @@
   Використовуйте generics, щоб вказати, що ці об'єкти можуть бути будь-якого типу.
 */
 
-function merge (objA, objB) {
+type TObject = {
+  [key: string | number]: any;
+};
+
+function merge<T extends TObject>(objA: T, objB: T): T {
   return Object.assign(objA, objB);
 }
 
-export {}
+export {};

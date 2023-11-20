@@ -1,6 +1,6 @@
-let some:unknown;
-some = 'Text';
+let some: string;
+some = "Text";
 let str: string;
 str = some;
 
-export {};
+export { some, str };
